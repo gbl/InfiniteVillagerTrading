@@ -1,0 +1,31 @@
+{
+    "schemaVersion": 1,
+    "id": "infinitevillagertrading",
+    "version": "${version}",
+    "environment": "*",
+    "entrypoints": {
+        "client": [ "de.guntram.mcmod.infinitevillagertrading.InfiniteVillagerTrading" ]
+    },
+    "custom": {
+        "modmenu:clientsideOnly": false
+    },
+    "mixins": [
+        "mixins.infinitevillagertrading.json"
+    ],
+    "depends": {
+      "fabric": "*"
+    },
+    "recommends": {
+      "modmenu" : "*"
+    },
+    "name": "InfiniteVillagerTrading",
+    "description": "Remove the maximum trade amount from villagers, allowing them to trade as often as you want",
+    "icon": "pack.png",
+    "authors": [ "Giselbaer" ],
+    "contact": {
+        "homepage": "https://www.curseforge.com/minecraft/mc-mods/infinitevillagertrading",
+        "sources": "https://github.com/gbl/InfiniteVillagerTrading",
+        "issues": "https://github.com/gbl/InfiniteVillagerTrading/issues"
+    }
+
+}

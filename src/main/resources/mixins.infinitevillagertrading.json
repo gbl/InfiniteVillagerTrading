@@ -1,0 +1,12 @@
+{
+    "required": true,
+    "package": "de.guntram.mcmod.infinitevillagertrading.mixins",
+    "refmap": "InfiniteVillagerTrading-refmap.json",
+    "minVersion": "0.6",
+    "client": [
+        "MixinTradeOffer"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    }
+}
