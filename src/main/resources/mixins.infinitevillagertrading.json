@@ -3,7 +3,7 @@
     "package": "de.guntram.mcmod.infinitevillagertrading.mixins",
     "refmap": "InfiniteVillagerTrading-refmap.json",
     "minVersion": "0.6",
-    "client": [
+    "mixins": [
         "MixinTradeOffer"
     ],
     "injectors": {
