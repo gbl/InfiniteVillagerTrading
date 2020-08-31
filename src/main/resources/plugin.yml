@@ -1,0 +1,5 @@
+## YAML Template.
+name: InfiniteVillagerTrading
+main: de.guntram.bukkit.InfiniteVillagerTrading.Main
+version: ${version}
+api-version: 1.16
