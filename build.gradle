@@ -19,7 +19,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext.Versions = new Properties()
-Versions.load(file("Versionfiles/mcversion-1.16.2.properties").newReader())
+Versions.load(file("Versionfiles/mcversion-20w46a.properties").newReader())
 
 archivesBaseName = "infinitevillagertrading"
 ext.projectVersion = "1.1"
@@ -48,11 +48,11 @@ processResources {
 dependencies {
     minecraft  "com.mojang:minecraft:${Versions['minecraft_version']}"
     mappings   "net.fabricmc:yarn:${Versions['yarn_mappings']}:v2"
-    modCompile "net.fabricmc:fabric-loader:${Versions['loader_version']}"
-    modCompile "net.fabricmc.fabric-api:fabric-api:${Versions['fabric_version']}"
-    modCompile "io.github.prospector:modmenu:${Versions['modmenu_version']}"
+    modImplementation "net.fabricmc:fabric-loader:${Versions['loader_version']}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${Versions['fabric_version']}"
+    modImplementation "io.github.prospector:modmenu:${Versions['modmenu_version']}"
 
-    modCompile ("org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT") {
+    compile ("org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT") {
         exclude group: "com.google.guava", module: "guava"
         exclude group: "com.google.code.gson", module: "gson"
     }
