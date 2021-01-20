@@ -1,7 +1,6 @@
 plugins {
 	id 'fabric-loom' version '0.4-SNAPSHOT'
 	id "com.modrinth.minotaur" version "1.1.0"
-
 }
 
 repositories {
@@ -21,7 +20,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 ext.Versions = new Properties()
-Versions.load(file("Versionfiles/mcversion-20w51a.properties").newReader())
+Versions.load(file("Versionfiles/mcversion-21w03a.properties").newReader())
 
 archivesBaseName = "infinitevillagertrading"
 ext.projectVersion = "1.1"
