@@ -22,7 +22,7 @@ public class MixinTradeOffer {
         this.demandBonus = 0;
     }
     
-    @Inject(method = "updatePriceOnDemand", at=@At("RETURN")) 
+    @Inject(method = "updateDemandBonus", at=@At("RETURN")) 
     public void resetDemandBonus(CallbackInfo ci) {
         this.demandBonus = 0;
     }
