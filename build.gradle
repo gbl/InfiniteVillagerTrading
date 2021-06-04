@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '0.6-SNAPSHOT'
+	id 'fabric-loom' version '0.8-SNAPSHOT'
 	id "com.modrinth.minotaur" version "1.1.0"
 }
 
@@ -19,11 +19,11 @@ repositories {
 
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 16
+targetCompatibility = 16
 
 ext.Versions = new Properties()
-Versions.load(file("Versionfiles/mcversion-21w13a.properties").newReader())
+Versions.load(file("Versionfiles/mcversion-1.17-pre5.properties").newReader())
 
 archivesBaseName = "infinitevillagertrading"
 ext.projectVersion = "1.1"
@@ -35,18 +35,14 @@ minecraft {
 }
 
 processResources {
-	inputs.property "version", project.version
+    inputs.property "version", project.version
 
-    from(sourceSets.main.resources.srcDirs) {
-		include "fabric.mod.json"
-        include "plugin.yml"
-		expand "version": project.version
-	}
-
-	from(sourceSets.main.resources.srcDirs) {
-		exclude "fabric.mod.json"
-        exclude "plugin.yml"
-	}
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+    filesMatching("plugin.yml") {
+        expand "version": project.version
+    }
 }
 
 dependencies {
@@ -56,7 +52,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${Versions['fabric_version']}"
     modImplementation "com.terraformersmc:modmenu:${Versions['modmenu_version']}"
 
-    compile ("org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT") {
+    implementation ("org.spigotmc:spigot-api:1.16.2-R0.1-SNAPSHOT") {
         exclude group: "com.google.guava", module: "guava"
         exclude group: "com.google.code.gson", module: "gson"
     }
